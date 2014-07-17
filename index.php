@@ -1,4 +1,4 @@
-<?php
+                                <?php
 /*Author @mogita
   DO WHATEVER THE FUCK YOU LIKE xD
 */
@@ -91,22 +91,48 @@ function ak_img_resize($original, $new, $width, $height, $extension = "jpg") {
 			margin: 0 auto;
 			width: 985px;
 		}
-		#header {
+		p.header-title {
 			height: auto;
 			font-size: 4em;
-			display: block;
-			float: left;
+			display: inline;
 			text-transform:uppercase;
 		}
-		#header a {
+		p.header-title a {
 			color: #5A5B5A;
 		}
-		#header a:hover {
+		p.header-title a:hover {
 			color: #5A5B5A;
 			text-decoration: none;
 		}
-		#header a:visited {
+		p.header-title a:visited {
 			color: #5A5B5A;
+		}
+		p.github-badge {
+		        display: inline;
+		        padding: 6px;
+		        font-size: 9px;
+		        margin-left: 20px;
+		        margin-bottom: 10px;
+		        color: #e5e5e5;
+		        background-color: grey;
+		        -webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+		p.github-badge a {
+			color: #e5e5e5;
+			}
+		p.github-badge a:hover {
+			color: #e5e5e5;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		p.github-badge a:visited {
+			color: #e5e5e5;
+		}
+		#header {
+		        display: block;
+		        height: 140px;
+		        margin-top: 80px;
 		}
 		#content {
 			width: 970px;
@@ -169,6 +195,8 @@ function ak_img_resize($original, $new, $width, $height, $extension = "jpg") {
 			display: inline-table;
 			min-height: 1%;
 		}
+		
+		
 	</style>
 	<script type="text/javascript" src="js/ibox/ibox.js"></script>
 	<link rel="stylesheet" href="js/ibox/skins/lightbox/lightbox.css" type="text/css" 
@@ -179,8 +207,10 @@ media="screen"/>
 <body>
 	<div id="wrapper">
 		<div id="header" class="clr">
-			<p><?php echo '<a href="'.$_SERVER['SCRIPT_NAME'].'">'.htmlspecialchars(MG_HEADER, ENT_QUOTES).'</a>'; ?></p>
+			<p class="header-title"><?php echo '<a href="'.$_SERVER['SCRIPT_NAME'].'">'.htmlspecialchars(MG_HEADER, ENT_QUOTES).'</a>'; ?></p>
+			<p class="github-badge"><a href="https://github.com/mogita/MoGallery" target="_blank">View on GitHub</a></p>
 		</div>
+		
 		
 		<div id="content" class="clr">
 				<?php echo $mgGalleryPageContent; ?>
@@ -193,3 +223,5 @@ media="screen"/>
 	</div>
 </body>
 </html>
+
+                            
